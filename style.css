@@ -76,6 +76,7 @@ button {
   width: 100%;
   transition: opacity .125s;
   cursor: pointer;
+  box-shadow: 10px 5px 20px rgba(0,0,0,.2);
 }
 button:active {
   opacity: .7;
@@ -91,14 +92,15 @@ button:active {
 }
 @media only screen and (min-width: 600px) {
   .container-wrapper {
-    max-width: 735px;
+    max-width: 700px;
     margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto)
   }
   .utility {
-    padding: 40px;
-    gap: 25px;
+    padding: 30px;
+    gap: 20px;
   }
   .card1 {
     grid-area: 1/1/1/3;
@@ -110,8 +112,5 @@ button:active {
   .card3 {
     border-radius: 0 0 5px 0;
   }
-  .card3 p {
-    width: 100%;
-    max-width: 64%;
-  }
+  
 }
